@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Geek\'s Love Calculator</string>
 
-  <string-array name="names">
-      <item> Java </item>
-      <item> HTML </item>
-      <item> Python </item>
-      <item> JavaScript </item>
-      <item> NodeJs </item>
-      <item> CSS </item>
-  </string-array>
+<!--  <string-array name="names">-->
+<!--      <item> Java </item>-->
+<!--      <item> HTML </item>-->
+<!--      <item> Python </item>-->
+<!--      <item> JavaScript </item>-->
+<!--      <item> NodeJs </item>-->
+<!--      <item> CSS </item>-->
+<!--  </string-array>-->
 </resources>

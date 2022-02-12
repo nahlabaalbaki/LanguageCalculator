@@ -71,8 +71,8 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="108dp"
-        android:layout_height="63dp"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -106,5 +106,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner1"
         app:layout_constraintVertical_bias="0.32" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="88dp"
+        android:layout_height="155dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="531dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

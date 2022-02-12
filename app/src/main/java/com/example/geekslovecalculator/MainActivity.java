@@ -6,30 +6,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+    Spinner mySpinner;
     Button button;
     TextView txt;
+    ImageView image;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Spinner mySpinner = (Spinner) findViewById(R.id.spinner1);
+        
+        txt=(TextView)findViewById(R.id.txt);
+        button=(Button)findViewById(R.id.button);
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
+        mySpinner = (Spinner) findViewById(R.id.spinner1);
+        image=(ImageView)findViewById(R.id.image);
 
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        String [] names ={"Select One","Java","Python", "HTML", "CSS", "NodeJs", "JavaScript"};
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_dropdown_item,names);
+
         mySpinner.setAdapter(myAdapter);
 
-        txt=findViewById(R.id.txt);
-        button=findViewById(R.id.button);
+
+
     }
     public void Calculate(View view){
 
