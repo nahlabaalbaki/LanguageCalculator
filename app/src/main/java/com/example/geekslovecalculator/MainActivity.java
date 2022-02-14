@@ -2,6 +2,7 @@ package com.example.geekslovecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView txt;
     ImageView image;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,23 +44,31 @@ public class MainActivity extends AppCompatActivity {
                 switch(i){
                     case 1:
                         image.setImageResource(R.drawable.java);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
                         break;
                     case 2:
                         image.setImageResource(R.drawable.python);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
                         break;
                     case 3:
                         image.setImageResource(R.drawable.html);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
                         break;
                     case 4:
                         image.setImageResource(R.drawable.css);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
                         break;
                     case 5:
                         image.setImageResource(R.drawable.nodejs);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
                         break;
                     case 6:
                         image.setImageResource(R.drawable.js);
+                        image.animate().scaleX(0.5f).scaleY(0.5f).setDuration(2000);
+                        break;
 
                 }
+                
             }
 
             @Override
@@ -70,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
     public void Calculate(View view){
 
@@ -78,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
         int val = random.nextInt(100);
         txt.setText(Integer.toString(val));
-
-
     }
+
 
 }
