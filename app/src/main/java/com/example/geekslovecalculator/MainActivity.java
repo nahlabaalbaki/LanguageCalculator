@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -18,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
     Spinner mySpinner;
     Button button;
     TextView txt;
+    TextView txt1;
+    TextView txt2;
     ImageView image;
+    EditText name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txt=(TextView)findViewById(R.id.txt);
+        txt1=(TextView)findViewById(R.id.txt1);
+        txt2=(TextView)findViewById(R.id.txt2);
+        name=(EditText)findViewById(R.id.name);
         button=(Button)findViewById(R.id.button);
 
         mySpinner = (Spinner) findViewById(R.id.spinner1);
@@ -85,6 +92,11 @@ public class MainActivity extends AppCompatActivity {
 
         int val = random.nextInt(100);
         txt.setText(Integer.toString(val));
+
+        String name1= name.getText().toString();
+        txt2.setText(name1);
+
+        txt1.setText(Integer.toString(val));
     }
 
 
